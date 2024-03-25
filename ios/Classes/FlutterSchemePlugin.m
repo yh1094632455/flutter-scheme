@@ -54,7 +54,7 @@ static id _instance;
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler{
     if ([userActivity.activityType isEqualToString:NSUserActivityTypeBrowsingWeb]) {
         [self foundSchemeURL:[userActivity webpageURL]];
-        return YES;
+        return NO;
     }
     return  NO;
 }
